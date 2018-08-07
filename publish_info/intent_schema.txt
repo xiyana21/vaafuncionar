@@ -1,7 +1,72 @@
 {
-  "intents": [
-    {
-      "intent": "getLatestSpinPost"
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "sun skill",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "CarIntent",
+                    "slots": [
+                        {
+                            "name": "LIST_OF_DIRECTIONS",
+                            "type": "LIST_OF_DIRECTIONS"
+                        }
+                    ],
+                    "samples": [
+                        "make the car go {LIST_OF_DIRECTIONS}",
+                        "drive the car {LIST_OF_DIRECTIONS}",
+                        "move the car {LIST_OF_DIRECTIONS}",
+                        "Go {LIST_OF_DIRECTIONS}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "LIST_OF_DIRECTIONS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "back"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "reverse"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "backward"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "forward"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "straight"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
     }
-  ]
 }
